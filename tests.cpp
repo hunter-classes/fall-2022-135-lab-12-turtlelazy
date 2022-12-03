@@ -41,5 +41,23 @@ TEST_CASE("TASK B")
 }
 
 TEST_CASE("TASK C"){
-    
+    std::vector<int> v1{1, 2, 3};
+    std::vector<int> v2{4, 5};
+    std::vector<int> compare { 1, 2, 3, 4, 5 };
+    gogeta(v1, v2);
+    CHECK(v1 == compare);
+    compare = {};
+    CHECK(v2 == compare);
+
+    v2 = {1, 2, 3};
+    v1 = {4, 5};
+    compare = {1, 2, 3, 4, 5};
+    gogeta(v2, v1);
+    CHECK(v2 == compare);
+    compare = {};
+    CHECK(v1 == compare);
+}
+
+TEST_CASE("TASK D"){
+
 }
