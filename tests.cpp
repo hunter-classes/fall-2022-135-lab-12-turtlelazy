@@ -56,8 +56,24 @@ TEST_CASE("TASK C"){
     CHECK(v2 == compare);
     compare = {};
     CHECK(v1 == compare);
+    
+    v2 = {};
+    v1 = {1,2,3,4, 5};
+    compare = {1, 2, 3, 4, 5};
+    gogeta(v2, v1);
+    CHECK(v2 == compare);
+    compare = {};
+    CHECK(v1 == compare);
 }
 
 TEST_CASE("TASK D"){
+    std::vector<int> v1{1, 2, 3};
+    std::vector<int> v2{4, 5};
+    std::vector<int> compare{5,7,3};
+    CHECK(sumPairWise(v1, v2) == compare);
+    CHECK(sumPairWise(v2, v1) == compare);
 
+    std::vector<int> v4{};
+    std::vector<int> v3{5,7,3};
+    CHECK(sumPairWise(v3, v4) == compare);
 }
