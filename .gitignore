@@ -2,3 +2,4 @@
 main
 tests
 .DS_Store
+.vscode
