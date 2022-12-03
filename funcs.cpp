@@ -1,5 +1,5 @@
 #include "funcs.h"
-
+#include <vector>
 //Task A
 std::vector<int> makeVector(int n){
     std::vector<int> returnVector;
